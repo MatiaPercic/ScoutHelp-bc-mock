@@ -1,10 +1,11 @@
 import express from "express";
 import cors from "cors";
-import data from "./store";
-/*import volonteri from "./volonteri";
-import { admins } from "./admins"
-import { obliciRada } from "./obliciRada";
-import { voditeljskeAktivnosti } from "./voditeljskeAktivnosti";*/
+
+import {volonteri} from "./volonteri.js";
+import { admins } from "./admins.js"
+import { obliciRada } from "./obliciRada.js";
+import { voditeljskeAktivnosti } from "./voditeljskeAktivnosti.js";
+
 const app= express();
 const port= 3100;
 
@@ -16,9 +17,12 @@ app.get("/", (req,res) => {
     res.send("ScoutHelp") }
 );
 
+//svi volonteri
 app.get("/volonter", (req, res) => {
-    res.json(data.volonteri);
+    res.send(volonteri);
   });
+
+
 
 
 app.listen(port, () => console.log(`Slušam na portu ${port}!`));
