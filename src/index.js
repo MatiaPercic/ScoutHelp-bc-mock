@@ -33,23 +33,22 @@ app.get("/volonter/:id", (req,res) =>{
 });
 
 
-//pokušaj postave POST novog volontera
-app.post('/volonter', (req, res) => {
+//dodavanje novog volontera
+app.post("/volonter", (req, res) => {
+    const { id, ime, prezime, godine } = req.body;
+    volonteri.push({ id: id, ime: ime, prezime: prezime, godine: godine });
     res.statusCode = 201;
-    res.setHeader('Location', '/volonter/1001');
-    res.send();
-    console.log("volonter post");
+    res.send(volonteri);
+  });
 
-});
-
-//pokušaj promjene godina volonteru  --????
-app.patch("volonter", (req,res) => {
-    const {id, noveGodine } = req.body;
-    const pachVolonetr= volonteri.find((volonter) => volonter.id===id);
-    pachVolonetr.godine=noveGodine;
+//promjena godina volonteru
+app.patch("/volonter/:id", (req, res) => {
+    const { id } = req.params;
+    const { noveGodine } = req.body;
+    volonteri.find((volonter) => volonter.id === id).godine = noveGodine;
     res.status(200);
-    res.send(pachVolonetr);
-})
+    res.send(volonteri);
+  });
 
 
 

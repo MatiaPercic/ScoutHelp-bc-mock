@@ -43,6 +43,20 @@ export const aktivnosti=[
 
         oblikRada: ['Odredska aktivnost','Družinski izlet'],
                     
+        administrator: [{
+            id:'2',
+            ime:'Biba',
+            prezime:'Bibić',
+            pozicija:'Pomoćni vođa družine poletaraca'
+        },
+        {
+            id:'3',
+            ime:'Car',
+            prezime:'Carić',
+            pozicija:'Vođa družine izviđača'
+        }
+    ],
+
         volonteri:[ {
             id: '0001',
             ime: 'Marko',
