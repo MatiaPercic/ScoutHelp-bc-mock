@@ -23,12 +23,25 @@ app.get("/volonter", (req, res) => {
     res.send(volonteri);
   });
 
+  //volonter po id-u -- ne radi??
 app.get("/volonter/:id", (req,res) =>{
     const id=Number(req.params.id);
-    const jedanVolonter= volonteri.find((volonter) => volonteri.id === id);
+    const jedanVolonter= volonteri.find((volonter) => volonter.id === id);
     res.status(200);
     res.send(jedanVolonter);
 });
 
+//svi administratori
+app.get("/administratori" ,(req,res) => {
+    res.status(200);
+    res.send(admins);
+})
+
+app.get("/volonter/:id", (req,res) =>{
+    const id=Number(req.params.id);
+    const jedanVolonter= volonteri.find((volonter) => volonter.id === id);
+    res.status(200);
+    res.send(jedanVolonter);
+});
 
 app.listen(port, () => console.log(`Slušam na portu ${port}!`));
