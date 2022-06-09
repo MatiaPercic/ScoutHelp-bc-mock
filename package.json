@@ -1,11 +1,11 @@
 {
   "name": "scouthelp-bc-mock",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "description": "'mock' backend za project ScoutHelp u sklopu kolegija Web aplikacije",
   "main": "index.js",
   "scripts": {
-    "serve": "node src/index.js",
+    "serve": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MatiaPercic/ScoutHelp-bc-mock/issues"
   },
-  "homepage": "https://github.com/MatiaPercic/ScoutHelp-bc-mock#readme"
+  "homepage": "https://github.com/MatiaPercic/ScoutHelp-bc-mock#readme",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
