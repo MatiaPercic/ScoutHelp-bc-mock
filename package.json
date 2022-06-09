@@ -2,7 +2,7 @@
   "name": "mock-bc",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "'mock' backend za project ScoutHelp u sklopu kolegija Web aplikacije",
   "main": "index.js",
   "scripts": {
     "serve": "nodemon src/index.js",
@@ -14,5 +14,13 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiaPercic/ScoutHelp-bc-mock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatiaPercic/ScoutHelp-bc-mock/issues"
+  },
+  "homepage": "https://github.com/MatiaPercic/ScoutHelp-bc-mock#readme"
 }
