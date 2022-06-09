@@ -4,6 +4,7 @@ import cors from "cors";
 import {volonteri} from "./volonteri.js";
 import { admins } from "./admins.js"
 import { aktivnosti } from "./aktivnosti.js";
+import { volontiranje } from "./volontiranje.js";
 import { obliciRada } from "./obliciRada.js";
 import { voditeljskeAktivnosti } from "./voditeljskeAktivnosti.js";
 
@@ -59,6 +60,12 @@ app.get("/aktivnost/:datum", (req,res) =>{
     res.status(200);
     res.send(jednaAktivnost);
 
+})
+
+//ispis svih volonterstva odvojeno po volonteru
+app.get("/volontiranje", (req,res) => {
+    res.status(200);
+    res.send(volontiranje)
 })
 
 app.listen(port, () => console.log(`Slušam na portu ${port}!`));
