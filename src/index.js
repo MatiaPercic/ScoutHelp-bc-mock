@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { volonteri } from "./volonteri";
 import { admins } from "./admins"
+import { obliciRada } from "./obliciRada";
 
 
 const app= express();
