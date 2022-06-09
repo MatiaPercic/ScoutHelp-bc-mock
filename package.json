@@ -1,0 +1,20 @@
+{
+  "name": "scouthelp-bc-mock",
+  "type":"module",
+  "version": "1.0.0",
+  "description": "'mock' backend za project ScoutHelp u sklopu kolegija Web aplikacije",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiaPercic/ScoutHelp-bc-mock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatiaPercic/ScoutHelp-bc-mock/issues"
+  },
+  "homepage": "https://github.com/MatiaPercic/ScoutHelp-bc-mock#readme"
+}
