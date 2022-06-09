@@ -3,6 +3,7 @@ import cors from "cors";
 
 import {volonteri} from "./volonteri.js";
 import { admins } from "./admins.js"
+import { aktivnosti } from "./aktivnosti.js";
 import { obliciRada } from "./obliciRada.js";
 import { voditeljskeAktivnosti } from "./voditeljskeAktivnosti.js";
 
@@ -38,10 +39,26 @@ app.get("/administratori" ,(req,res) => {
 })
 
 app.get("/volonter/:id", (req,res) =>{
-    const id=Number(req.params.id);
+    const id=String(req.params.id);
     const jedanVolonter= volonteri.find((volonter) => volonter.id === id);
     res.status(200);
     res.send(jedanVolonter);
 });
+
+//sve aktivnosti
+app.get("/aktivnost", (req,res) => {
+    res.status(200);
+    res.send(aktivnosti);
+})
+
+
+//aktivnost na određen datum
+app.get("/aktivnost/:datum", (req,res) =>{
+    const datum=String(req.params.datum);
+    const jednaAktivnost= aktivnosti.find((aktivnost) => aktivnosti.datum===datum); 
+    res.status(200);
+    res.send(jednaAktivnost);
+
+})
 
 app.listen(port, () => console.log(`Slušam na portu ${port}!`));
