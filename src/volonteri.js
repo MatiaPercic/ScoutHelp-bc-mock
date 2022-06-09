@@ -19,7 +19,7 @@ export const volonteri = [
         ime: 'Olga',
         prezime: 'Olić',
         godine: 21
-    },
+    }
 ];
 
 
