@@ -3,7 +3,7 @@ export const aktivnosti=[
     {
         id:'1001',
 
-        datum:' 23-04-2022',
+        datum:'23-04-2022',
 
         opis: 'Obilježavanje dana grada Pule',
 
