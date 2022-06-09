@@ -19,10 +19,16 @@ app.get("/", (req,res) => {
 
 //svi volonteri
 app.get("/volonter", (req, res) => {
+    res.status(200);
     res.send(volonteri);
   });
 
-
+app.get("/volonter/:id", (req,res) =>{
+    const id=Number(req.params.id);
+    const jedanVolonter= volonteri.find((volonter) => volonteri.id === id);
+    res.status(200);
+    res.send(jedanVolonter);
+});
 
 
 app.listen(port, () => console.log(`Slušam na portu ${port}!`));
